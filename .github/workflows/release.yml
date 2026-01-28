@@ -11,9 +11,6 @@ permissions:
   id-token: write  # Required for OIDC
   contents: write
 
-# env:
-#   NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
-
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -27,14 +24,7 @@ jobs:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org'
 
-    #   - name: Debug npm
-    #     run: | 
-    #         npm config list
-    #         npm whoami
-    #         npm config list
-    #         npm config get registry
-
-      - run: npm publish --access public
+      - run: npm publish
 
       - name: Upload npm publish logs
         if: always()
