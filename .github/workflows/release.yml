@@ -11,8 +11,8 @@ permissions:
   id-token: write  # Required for OIDC
   contents: write
 
-env:
-  NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+# env:
+#   NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
 
 jobs:
   publish:
