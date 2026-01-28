@@ -12,6 +12,10 @@
   },
   "author": "cpdunphy-nid",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cpdunphy-nid/random-color.git"
+  },
   "jest": {
     "testRegex": "\\.test\\.js$",
     "coverageDirectory": "dist/coverage",
