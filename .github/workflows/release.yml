@@ -11,8 +11,8 @@ permissions:
   id-token: write  # Required for OIDC
   contents: write
 
-# env:
-#   NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
 
 jobs:
   publish:
@@ -35,3 +35,10 @@ jobs:
     #         npm config get registry
 
       - run: npm publish --access public
+
+      - name: Upload npm publish logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+            name: npm-publish-logs
+            path: /home/runner/.npm/_logs/
