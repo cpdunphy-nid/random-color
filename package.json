@@ -1,0 +1,23 @@
+{
+  "name": "random-color",
+  "version": "1.0.0",
+  "description": "Generate a random color in hexadecimal format.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0"
+  },
+  "author": "",
+  "license": "MIT",
+  "jest": {
+    "testRegex": "\\.test\\.js$",
+    "coverageDirectory": "dist/coverage",
+    "collectCoverageFrom": [
+      "**/src/**/*.js",
+      "!**/node_modules/**"
+    ]
+  }
+}
