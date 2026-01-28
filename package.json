@@ -1,6 +1,6 @@
 {
   "name": "@cpdunphy/random-color",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Generate a random color in hexadecimal format.",
   "main": "src/index.js",
   "type": "module",
@@ -12,10 +12,7 @@
   },
   "author": "cpdunphy-nid",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cpdunphy-nid/random-color.git"
-  },
+  "repository": "https://github.com/cpdunphy-nid/random-color",
   "jest": {
     "testRegex": "\\.test\\.js$",
     "coverageDirectory": "dist/coverage",
