@@ -10,8 +10,8 @@ on:
 permissions:
   id-token: write  # Required for OIDC
 
-env:
-  NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+# env:
+#   NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
 
 jobs:
   createRelease:
@@ -22,16 +22,16 @@ jobs:
       - uses: actions/checkout@v6
 
       # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v4
         with:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Debug npm
-        run: | 
-            npm config list
-            npm whoami
-            npm config list
-            npm config get registry
+    #   - name: Debug npm
+    #     run: | 
+    #         npm config list
+    #         npm whoami
+    #         npm config list
+    #         npm config get registry
 
       - run: npm publish --access public
