@@ -9,15 +9,15 @@ on:
 
 permissions:
   id-token: write  # Required for OIDC
+  contents: write
 
 # env:
 #   NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
 
 jobs:
-  createRelease:
-    permissions:
-      contents: write
+  publish:
     runs-on: ubuntu-latest
+    environment: prod
     steps:
       - uses: actions/checkout@v6
 
