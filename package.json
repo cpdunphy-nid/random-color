@@ -1,5 +1,5 @@
 {
-  "name": "random-color",
+  "name": "@cpdunphy/random-color",
   "version": "1.0.0",
   "description": "Generate a random color in hexadecimal format.",
   "main": "src/index.js",
@@ -10,7 +10,7 @@
   "devDependencies": {
     "jest": "^30.2.0"
   },
-  "author": "",
+  "author": "cpdunphy-nid",
   "license": "MIT",
   "jest": {
     "testRegex": "\\.test\\.js$",
